@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message PingRequest {}
+
+message PingResponse {
+	int64 seconds = 2;
+	int32 nanos = 3;
+}
+
+service PingService {
+	rpc Ping (PingRequest) returns (PingResponse);
+}
